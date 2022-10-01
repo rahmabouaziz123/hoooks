@@ -1,23 +1,52 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import { moviesData } from './data';
+import { MovieList } from './Components/MovieList';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import './pp.scss';
+import { AddNiewMovie } from './Components/AddNiewMovie';
+import { Search } from './Components/Search';
+// import StarRatingp from './Components/StarRating';
+
 
 function App() {
+
+const[ data,setData]=useState(moviesData)
+//search 
+const [searching, setSearching]=useState("")
+const [rating, setRating] = useState(1)
+//editsearch
+ const handelSeartch=(y)=>setSearching(y)
+//
+const handelRating=(z)=>setRating(z)
+
+
+
+// to delete a Movie
+const HandelDelete=(ID)=>{setData(data.filter((el)=>el.id!==ID))}
+
+//add
+const handelAdd=(newMovie)=>{
+  setData([...data,newMovie])
+}
+
+// edit Movie
+
+const handelEdit=(editeMovie=>setData(data.map(el=>el.id===editeMovie.id?{...el,...editeMovie}:el)))
+
+
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Search searching={searching}  rating={rating} handelRating={handelRating} handelSeartch={handelSeartch}   />
+      <MovieList list={data.filter(el=>el.name.toLowerCase().includes(searching.toLowerCase())  && el.rating>=rating  ) } deleteMovie={HandelDelete}  handelEdit={handelEdit}/>
+      <AddNiewMovie handelAdd={handelAdd}/>
+     
     </div>
   );
 }
