@@ -56,7 +56,10 @@ export const EditMovie = ({ handelEdit ,movie }) => {
 
   return (
     <div>
-      <button onClick={openModal}>Edit Movie</button>
+      {/* <button onClick={openModal}>Edit Movie</button> */}
+
+      <Button   onClick={openModal}   className="btnEditMovie" variant="primary">Edit </Button>
+
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}

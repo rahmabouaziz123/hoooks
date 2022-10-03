@@ -23,7 +23,7 @@ export const MovieCard = ({ film, deleteMovie ,handelEdit }) => {
           
         </div>
 
-        <p className="dateinstant">{film.date} </p>
+        <div  className="dateinstant">{film.date} </div>
 
         <div className="btnDitDelete">
          <div> <Button
@@ -43,10 +43,18 @@ export const MovieCard = ({ film, deleteMovie ,handelEdit }) => {
            
           />
          </div> */}
+
+
+          
          <EditMovie  handelEdit={handelEdit} movie={film} />
+
+
+        
+
+
         </div>
         <figcaption>
-          <h3>W3docs</h3>
+          <h3>New Movie</h3>
         </figcaption>
       </figure>
     </div>

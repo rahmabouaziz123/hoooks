@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
-import { moviesData } from './data';
+import { moviesData } from './data';// contient data tableau de objet
 import { MovieList } from './Components/MovieList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -14,7 +14,7 @@ import { Search } from './Components/Search';
 function App() {
 
 const[ data,setData]=useState(moviesData)
-//search 
+// state search 
 const [searching, setSearching]=useState("")
 const [rating, setRating] = useState(1)
 //editsearch

@@ -8,10 +8,10 @@ const StarRatingp = ({rating ,handelRating}) => {
    let tab=[]
    for(let i=1;i<=5;i++){
     if(i<=rating){
-      tab.push(<span  className='etoil' style={{color:"gold"}} onClick={()=>handelRating(i)} > ✰</span>)
+      tab.push(<span  className='etoil' style={{color:"gold"}} onClick={()=>handelRating(i)} > <b> ✰</b></span>)
     }
     else{
-      tab.push(<span  className='etoil' style={{color:"Brown"}}  onClick={()=>handelRating(i)}  >✰</span>)
+      tab.push(<span  className='etoil' style={{color:"Brown"}}  onClick={()=>handelRating(i)}  ><b> ✰</b></span>)
     }
    }
     return tab;

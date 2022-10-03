@@ -55,7 +55,9 @@ export const AddNiewMovie = ({ handelAdd }) => {
 
   return (
     <div>
-      <button onClick={openModal}>Add New Movie</button>
+      {/* <button onClick={openModal}  className="AddNewMovie">Add New Movie</button> */}
+
+      <Button  onClick={openModal}  variant="primary" className="AddNewMovie">Add New Movie</Button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
