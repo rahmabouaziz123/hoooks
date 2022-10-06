@@ -1,30 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import StarRatingp from "./StarRating";
-
-// import './nav.js';
 
 export const Search = ({ searching, rating, handelRating, handelSeartch }) => {
   return (
     <div className="divTotalSearch">
-      <ul>
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#news">News</a>
-        </li>
-        <li className="dropdown">
-          <a href="javascript:void(0)" className="dropbtn">
-            Dropdown
-          </a>
-          <div className="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-        </li>
+      <ul className="divUl" >
+        <Link to="/"> Home </Link>
 
-        <div>
+        <Link to="link1"> News </Link>
+
+
+
+         <div>
           <form className=" searchDiv">
             <input
               type="text"
@@ -36,6 +24,24 @@ export const Search = ({ searching, rating, handelRating, handelSeartch }) => {
             </div>
           </form>
         </div>
+
+        <li className="dropdown">
+          <a href="javascript:void(0)" className="dropbtn">
+            Dropdown
+          </a>
+          <div className="dropdown-content">
+            
+            <Link to="/link1"> Link1 </Link>
+
+           
+            <Link to="/link2"> Link2 </Link>
+
+         
+            <Link to="/link3"> Link3 </Link>
+          </div>
+        </li>
+
+       
       </ul>
     </div>
 

@@ -75,9 +75,39 @@ button, input, optgroup, select, textarea {
   line-height: inherit;
   margin-top: 20px !important;
 }
+/* lllll 888888888888888  dertai   888888888888888*/
 
 
-/* ****************************************************************************************** */
+.CardTotal{
+display: flex;
+justify-content: center!important;
+
+}
+
+.cardDetail{
+  background: linear-gradient(blue, pink);
+}
+
+
+.textDetail{
+  font-size: 20px;
+  font-family: cursive;
+
+  
+}
+
+.textTitre{
+  color: brown !important;;
+}
+
+.link1{
+  background: linear-gradient(blue, pink);
+}
+
+.btnAdd{
+  margin-left: 10px;
+}
+/* ******************************8888888888888****************************************** */
 
 
 
@@ -265,12 +295,19 @@ figure.image.hover:before {
 /* bbbb******************************navbar************************************************** */
 
 .divTotalSearch{
-  /* margin-top: 30px; */
-   position: fixed;
-     margin-top: -500px; 
-/* margin-left: 30px; */
+  
+   /* position: fixed; */
+     /* margin-top: -500px;  */
+
 width: 100% ;
 
+
+
+}
+
+.divUl{
+  display: flex;
+  justify-content: space-around;
 }
 
 

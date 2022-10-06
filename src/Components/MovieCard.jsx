@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Card, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { EditMovie } from "./EditMovie";
 import StarRatingp from "./StarRating";
 
@@ -48,7 +49,9 @@ export const MovieCard = ({ film, deleteMovie ,handelEdit }) => {
           
          <EditMovie  handelEdit={handelEdit} movie={film} />
 
+           {/* 05/10/2022 */}
 
+           <Link to={`/product/${film.id}`}> <Button className="btnAdd" variant="primary">info</Button></Link>
         
 
 
